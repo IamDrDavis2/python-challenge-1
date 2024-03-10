@@ -173,51 +173,49 @@ while place_order:
         print("You didn't select a number.")
         break  
 
-while True:
-# Ask the customer if they would like to order anything else
+    while True:
+        # Ask the customer if they would like to order anything else
+        keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
 
-    keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
+    # 5. Check the customer's input
+        if keep_ordering.lower() =='y':
+            break
 
-# 5. Check the customer's input
-
-    if keep_ordering.lower() =='y':
-        break
-
-# Keep ordering
+            # Keep ordering
     
-    elif keep_ordering.lower() == 'n': # The customer wants to stop ordering
-        place_order = False
-        print("Thank you for your order.")
-        break
+        elif keep_ordering.lower() == 'n': # The customer wants to stop ordering
+            place_order = False
+            print("Thank you for your order.")
+            break
     
-# Exit the keep ordering question loop
+            # Exit the keep ordering question loop
 
-# Complete the order
+            # Complete the order
 
-# Since the customer decided to stop ordering, thank them for their order
+            # Since the customer decided to stop ordering, thank them for their order
     
-
-# Exit the keep ordering question loop
+            # Exit the keep ordering question loop
                
-# Tell the customer to try again
-    else:            
-        print("I don't understand that!")
-        print ("Try again. Y or y = continue ordering. N or n = stop.")
+            # Tell the customer to try again
+    
+        else:            
+            print("I don't understand that!")
+            print ("Try again. Y or y = continue ordering. N or n = stop.")
 
 # Print out the customer's order
-        print("This is what we are preparing for you.\n")
+print("This is what we are preparing for you.\n")
 
 # Uncomment the following line to check the structure of the order
 #print(order)
 
-        print(customer_order_list)
-        print("_\n")
+print(customer_order_list)
+print("_\n")
 
-        print("Item name                 | Price  | Quantity")
-        print("--------------------------|--------|----------")
+print("Item name                 | Price  | Quantity")
+print("--------------------------|--------|----------")
 
 # 6. Loop through the items in the customer's order
-    for i in range (len(customer_order_list)):
+for i in range (len(customer_order_list)):
 
     # 7. Store the dictionary items as variables
         order_item = customer_order_list[i]["Item name"]
@@ -253,4 +251,3 @@ while True:
 #total_cost_of_order = sum([cost for cost in cost_per_item])
         print(" \n")
         print(f'The total cost of your order is: ${total_cost_of_order}\n')
-
